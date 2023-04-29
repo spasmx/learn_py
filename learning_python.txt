@@ -1,0 +1,3 @@
+In Python you can reads files
+In Python you can writes class
+In Python you can writes func
