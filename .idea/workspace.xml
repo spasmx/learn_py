@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c08bdafd-b08c-4662-9722-59af52ec33a3" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/alien_game/alien.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alien_game/bullet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/bullet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alien_game/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alien_game/game_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alien_game/images/5558825.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alien_game/images/ship_white.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alien_game/scoreboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/enemy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/game_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/images/1.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/images/1c.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/images/bullet.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/learn_py.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learn_py.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien_game/alien.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/alien.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_game/alien_invasion.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/alien_invasion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien_game/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien_game/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/ship.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/bullet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/human.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/human.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/images/kuzya.bmp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/my_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/my_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/settings.py" afterDir="false" />
     </list>
@@ -34,6 +52,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2KC7n0UiTvsYN2JGT6bbfqZlerA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,7 +65,10 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/spasmx/PycharmProjects/pythonProject/learn_py&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/acer/PycharmProjects/pythonProject/learn_py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -56,6 +80,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.alien_invasion">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learn_py" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="alien_invasion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,20 +157,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_cities.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="learn_py" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/learn/test_cities.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_employee.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,9 +175,9 @@
       <list>
         <item itemvalue="Python.alien_invasion" />
         <item itemvalue="Python.my_game" />
+        <item itemvalue="Python.1" />
         <item itemvalue="Python tests.Python tests in test_employee.py" />
         <item itemvalue="Python tests.Python tests for learn.test_employee.TestEmployee.test_give_custom_raise" />
-        <item itemvalue="Python tests.Python tests in test_cities.py" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682779698169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="11">
+      <created>1682866577092</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682866577092</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,13 +246,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/bullet.py</url>
-          <line>23</line>
+          <line>25</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/bullet.py</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/alien_game/alien_invasion.py</url>
+          <line>209</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_game/my_game.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_game/my_game.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
