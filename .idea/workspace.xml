@@ -5,27 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c08bdafd-b08c-4662-9722-59af52ec33a3" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/alien_game/button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alien_game/game_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alien_game/images/5558825.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alien_game/images/ship_white.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alien_game/scoreboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/enemy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/game_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/1.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/1c.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/bullet.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/learn_py.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learn_py.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/components.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/images/Untitled.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/images/play_button.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/alien.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/alien.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_game/alien_invasion.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/alien_invasion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/bullet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien_game/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/game_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien_game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/ship.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/bullet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/human.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/human.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/images/kuzya.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/game_stats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/my_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/my_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/settings.py" afterDir="false" />
     </list>
@@ -56,21 +47,24 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2KC7n0UiTvsYN2JGT6bbfqZlerA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/acer/PycharmProjects/pythonProject/learn_py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/acer/PycharmProjects/pythonProject/learn_py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\spasmx\PycharmProjects\pythonProject\learn_py\learn" />
@@ -218,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682866577092</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="11">
+      <created>1683146125556</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683146125556</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +234,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="11" />
     <option name="LAST_COMMIT_MESSAGE" value="11" />
   </component>
@@ -256,18 +258,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/alien_game/alien_invasion.py</url>
-          <line>209</line>
+          <line>210</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/my_game.py</url>
-          <line>28</line>
+          <line>33</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/my_game.py</url>
-          <line>47</line>
+          <line>52</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_game/my_game.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

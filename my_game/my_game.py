@@ -5,6 +5,8 @@ import pygame
 
 from settings import Settings
 from game_stats import GameStats
+from button import Button
+from scoreboard import ScoreBoard
 from human import Human
 from bullet import Bullet
 from enemy import Enemy
@@ -20,11 +22,14 @@ class MyGame:
         # For fullscreen
         pygame.display.set_caption('The BEST GAME')
         self.stats = GameStats(self)
+        self.sb = ScoreBoard(self)
         self.human = Human(self)
         self.bullets = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
 
         self._create_fleet()
+
+        self.play_button = Button(self)
 
     def _create_fleet(self):
         """Create enemy's fleet"""
@@ -71,10 +76,28 @@ class MyGame:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                self._check_play_button(mouse_pos)
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
+
+    def _check_play_button(self, mouse_pos):
+        button_clicked = self.play_button.image_rect.collidepoint(mouse_pos)
+        if button_clicked and not self.stats.game_active:
+            self.settings.initialize_dynamic_settings()
+            pygame.mouse.set_visible(False)
+            self.stats.reset_stats()
+            self.stats.game_active = True
+            self.sb.prep_score()
+            # Delete aliens and bullets
+            self.enemies.empty()
+            self.bullets.empty()
+            # Create the new fleet and ship in center
+            self._create_fleet()
+            self.human.center_human()
 
     def _check_keydown_events(self, event):
         if event.key == pygame.K_d:
@@ -85,7 +108,7 @@ class MyGame:
             self.human.moving_up = True
         elif event.key == pygame.K_s:
             self.human.moving_down = True
-        elif event.key == pygame.K_q:
+        elif event.key == pygame.K_ESCAPE:
             sys.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
@@ -119,25 +142,30 @@ class MyGame:
     def _check_bullet_enemy_collisions(self):
         # Check if bullet shot in enemy, delete bullet and enemy
         collisions = pygame.sprite.groupcollide(self.bullets, self.enemies, True, True)
+        if collisions:
+            for enemies in collisions.values():
+                self.stats.score += self.settings.enemy_points * len(enemies)
+        self.sb.prep_score()
         if not self.enemies:
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increase_speed()
 
     def _update_enemies(self):
         self._check_fleet_edges()
         self.enemies.update()
 
         if pygame.sprite.spritecollideany(self.human, self.enemies):
-            self._ship_hit()
+            self._human_hit()
         self._check_enemies_bottom()
 
     def _check_enemies_bottom(self):
         screen_rect = self.screen.get_rect()
         for enemy in self.enemies.sprites():
             if enemy.rect.bottom >= screen_rect.bottom:
-                self._ship_hit()
+                self._human_hit()
 
-    def _ship_hit(self):
+    def _human_hit(self):
         """React to the collision of the alien with the ship"""
         if self.stats.humans_left > 0:
             # Reduce ships_left
@@ -149,17 +177,23 @@ class MyGame:
             self._create_fleet()
             self.human.center_human()
             # Pause
-            time.sleep(3.0)
+            time.sleep(0.5)
 
         else:
             self.stats.game_active = False
+            pygame.mouse.set_visible(True)
 
     def _update_screen(self):
+        """Refresh screen and switch to new screen"""
         self.screen.fill(self.settings.bg_color)
         self.human.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
         self.enemies.draw(self.screen)
+        self.sb.show_score()
+        # Draw a button "Play" if the game not active
+        if not self.stats.game_active:
+            self.play_button.draw_button()
         pygame.display.flip()
 
     def start_game(self):
@@ -169,7 +203,7 @@ class MyGame:
                 self.human.update()
                 self._update_bullets()
                 self._update_enemies()
-                self._update_screen()
+            self._update_screen()
 
 
 if __name__ == '__main__':

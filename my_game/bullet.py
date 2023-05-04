@@ -9,7 +9,7 @@ class Bullet(Sprite):
         super().__init__()
         self.screen = game.screen
         self.settings = game.settings
-        self.color = self.settings.bullet_color
+        # self.color = self.settings.bullet_color
 
         # Create bullet rect at (0, 0) and task to correct position
         #self.rect = pygame.Rect(0, 0, self.settings.bullet_width, self.settings.bullet_height)
