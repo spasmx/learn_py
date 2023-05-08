@@ -96,6 +96,8 @@ class AlienInvasion:
             self.stats.reset_stats()
             self.stats.game_active = True
             self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_ships()
             # Delete aliens and bullets
             self.aliens.empty()
             self.bullets.empty()
@@ -147,11 +149,13 @@ class AlienInvasion:
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
             self.sb.check_high_score()
+
         if not self.aliens:
             self.bullets.empty()
             self._create_fleet()
             self.settings.increase_speed()
-
+            self.stats.level += 1
+            self.sb.prep_level()
     def _update_aliens(self):
         self._check_fleet_edges()
         self.aliens.update()
@@ -171,6 +175,7 @@ class AlienInvasion:
         if self.stats.ships_left > 0:
             # Reduce ships_left
             self.stats.ships_left -= 1
+            self.sb.prep_ships()
             # Delete all enemies and bullets
             self.aliens.empty()
             self.bullets.empty()

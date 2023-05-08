@@ -1,17 +1,19 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Human:
+class Human(Sprite):
     """Human control class"""
 
     def __init__(self, game):
+        super().__init__()
+
         self.screen = game.screen
         self.settings = game.settings
         self.screen_rect = game.screen.get_rect()
 
         self.image = pygame.image.load('images/1.bmp')
         self.rect = self.image.get_rect()
-
         self.rect.midbottom = self.screen_rect.midbottom
 
         self.x = float(self.rect.x)
@@ -21,6 +23,14 @@ class Human:
         self.moving_right = False
         self.moving_up = False
         self.moving_down = False
+
+    def change_size(self):
+        """Change size image for display human life"""
+        new_size = (self.image.get_width() // 2, self.image.get_height() // 2)
+        resized_human = pygame.transform.scale(self.image, new_size)
+        self.image = resized_human
+        self.rect = self.image.get_rect()
+        self.rect.inflate_ip(-self.rect.width // 2, -self.rect.height // 2)
 
     def _update_x_coordinate(self):
         """Update human position based on move x-coordinate"""
@@ -52,3 +62,4 @@ class Human:
     def center_human(self):
         self.rect.midbottom = self.screen_rect.midbottom
         self.x = float(self.rect.x)
+        self.y = float(self.rect.y)

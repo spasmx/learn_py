@@ -7,6 +7,8 @@ from settings import Settings
 from game_stats import GameStats
 from button import Button
 from scoreboard import ScoreBoard
+from components import Components
+from boss import Boss
 from human import Human
 from bullet import Bullet
 from enemy import Enemy
@@ -20,10 +22,15 @@ class MyGame:
         self.settings = Settings()
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         # For fullscreen
+        # self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+        # self.settings.screen_width = self.screen.get_rect().width
+        # self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption('The BEST GAME')
         self.stats = GameStats(self)
         self.sb = ScoreBoard(self)
+        self.comp = Components(self)
         self.human = Human(self)
+        self.boss = Boss(self)
         self.bullets = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
 
@@ -42,7 +49,7 @@ class MyGame:
 
         # Determine how many rows of enemies fit on the screen
         human_height = self.human.rect.height
-        available_space_y = (self.settings.screen_height - (6 * enemy_height) - human_height)
+        available_space_y = self.settings.screen_height - (4 * enemy_height) - human_height
         number_rows = available_space_y // (2 * enemy_height)
 
         # Create the all rows of enemies
@@ -92,6 +99,8 @@ class MyGame:
             self.stats.reset_stats()
             self.stats.game_active = True
             self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_humans()
             # Delete aliens and bullets
             self.enemies.empty()
             self.bullets.empty()
@@ -145,11 +154,25 @@ class MyGame:
         if collisions:
             for enemies in collisions.values():
                 self.stats.score += self.settings.enemy_points * len(enemies)
-        self.sb.prep_score()
-        if not self.enemies:
-            self.bullets.empty()
+            self.sb.prep_score()
+            self.sb.check_hight_score()
+        if not self.enemies and not self.stats.level % 3 == 0:
+            self._update_stats()
             self._create_fleet()
-            self.settings.increase_speed()
+        else:
+            self.create_boss()
+
+    def _update_stats(self):
+        self.bullets.empty()
+        self.settings.increase_speed()
+        if not self.boss.boss_defeated:
+            self.stats.level += 1
+        self.boss.boss_defeated = False
+        self.sb.prep_level()
+        self.comp.show_win_image()
+        pygame.display.flip()
+        time.sleep(1.5)
+        self.human.center_human()
 
     def _update_enemies(self):
         self._check_fleet_edges()
@@ -165,11 +188,31 @@ class MyGame:
             if enemy.rect.bottom >= screen_rect.bottom:
                 self._human_hit()
 
+    def create_boss(self):
+        if self.stats.level % 3 == 0 and not self.boss.boss_defeated:
+            self.enemies.empty()
+            self.boss.draw_boss()
+            self._hit_boss()
+
+    def _hit_boss(self):
+        if pygame.sprite.spritecollideany(self.boss, self.bullets):
+            bullet = pygame.sprite.spritecollideany(self.boss, self.bullets)
+            self.boss.take_damage()
+            bullet.kill()
+            print(self.settings.boss_hp)
+            if self.settings.boss_hp <= 0:
+                self.boss.kill()
+                self.stats.score += self.settings.boss_points
+                self._update_stats()
+                self.boss.boss_defeated = True
+                self.settings.boss_hp = 60
+
     def _human_hit(self):
         """React to the collision of the alien with the ship"""
         if self.stats.humans_left > 0:
             # Reduce ships_left
             self.stats.humans_left -= 1
+            self.sb.prep_humans()
             # Delete all enemies and bullets
             self.enemies.empty()
             self.bullets.empty()
@@ -177,7 +220,9 @@ class MyGame:
             self._create_fleet()
             self.human.center_human()
             # Pause
-            time.sleep(0.5)
+            self.comp.show_lose_image()
+            pygame.display.flip()
+            time.sleep(1.5)
 
         else:
             self.stats.game_active = False
@@ -191,6 +236,7 @@ class MyGame:
             bullet.draw_bullet()
         self.enemies.draw(self.screen)
         self.sb.show_score()
+        self.create_boss()
         # Draw a button "Play" if the game not active
         if not self.stats.game_active:
             self.play_button.draw_button()
