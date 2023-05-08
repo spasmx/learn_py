@@ -3,16 +3,13 @@ from pygame.sprite import Sprite
 
 
 class Bullet(Sprite):
-    """Class for manage a ship bullets"""
+    """Class for manage a human bullets"""
 
     def __init__(self, game):
         super().__init__()
         self.screen = game.screen
         self.settings = game.settings
-        # self.color = self.settings.bullet_color
 
-        # Create bullet rect at (0, 0) and task to correct position
-        #self.rect = pygame.Rect(0, 0, self.settings.bullet_width, self.settings.bullet_height)
         self.image = pygame.image.load('images/bullet.bmp')
         self.rect = self.image.get_rect()
         self.rect.midtop = game.human.rect.midtop

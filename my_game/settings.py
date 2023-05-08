@@ -14,7 +14,7 @@ class Settings:
         # self.bullet_height = 30
         # self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
-        self.bullets_damage = 10
+        self.bullets_damage = 15
 
         self.fleet_drop_speed = 10
 
@@ -23,12 +23,15 @@ class Settings:
 
         self.boss_hp = 60
         self.boss_points = 10000
+        self.boss_bullets_allowed = 10000
         self.initialize_dynamic_settings()
 
     def initialize_dynamic_settings(self):
         self.human_speed = 1.5
-        self.bullet_speed = 5
+        self.bullet_speed = 0.8
         self.enemy_speed = 0.3
+        self.boss_speed = 0.1
+        self.boss_bullet_speed = 0.5
         # fleet_direction 1 meaning move direction on the right, -1 - on the left
         self.fleet_direction = 1
         self.enemy_points = 50
@@ -37,5 +40,6 @@ class Settings:
         """Speed Up"""
         self.human_speed *= self.speedup_scale
         self.bullet_speed *= self.speedup_scale
+        self.boss_bullet_speed *= self.speedup_scale
         self.enemy_speed *= self.speedup_scale
         self.enemy_points = int(self.enemy_points * self.score_scale)

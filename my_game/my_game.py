@@ -1,5 +1,6 @@
 import sys
 import time
+from random import randint
 
 import pygame
 
@@ -12,6 +13,7 @@ from boss import Boss
 from human import Human
 from bullet import Bullet
 from enemy import Enemy
+from boss_bullet import BossBullet
 
 
 class MyGame:
@@ -33,6 +35,7 @@ class MyGame:
         self.boss = Boss(self)
         self.bullets = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
+        self.boss_bullets = pygame.sprite.Group()
 
         self._create_fleet()
 
@@ -109,6 +112,8 @@ class MyGame:
             self.human.center_human()
 
     def _check_keydown_events(self, event):
+        if event.key == pygame.K_SPACE:
+            self._fire_bullet()
         if event.key == pygame.K_d:
             self.human.moving_right = True
         elif event.key == pygame.K_a:
@@ -119,8 +124,6 @@ class MyGame:
             self.human.moving_down = True
         elif event.key == pygame.K_ESCAPE:
             sys.exit()
-        elif event.key == pygame.K_SPACE:
-            self._fire_bullet()
 
     def _check_keyup_events(self, event):
         if event.key == pygame.K_d:
@@ -163,16 +166,16 @@ class MyGame:
             self.create_boss()
 
     def _update_stats(self):
-        self.bullets.empty()
-        self.settings.increase_speed()
         if not self.boss.boss_defeated:
+            self.bullets.empty()
             self.stats.level += 1
+            self.settings.increase_speed()
+            self.sb.prep_level()
+            self.comp.show_win_image()
+            pygame.display.flip()
+            time.sleep(1.5)
+            self.human.center_human()
         self.boss.boss_defeated = False
-        self.sb.prep_level()
-        self.comp.show_win_image()
-        pygame.display.flip()
-        time.sleep(1.5)
-        self.human.center_human()
 
     def _update_enemies(self):
         self._check_fleet_edges()
@@ -193,19 +196,62 @@ class MyGame:
             self.enemies.empty()
             self.boss.draw_boss()
             self._hit_boss()
+            self._update_boss()
 
     def _hit_boss(self):
         if pygame.sprite.spritecollideany(self.boss, self.bullets):
-            bullet = pygame.sprite.spritecollideany(self.boss, self.bullets)
-            self.boss.take_damage()
-            bullet.kill()
-            print(self.settings.boss_hp)
-            if self.settings.boss_hp <= 0:
-                self.boss.kill()
-                self.stats.score += self.settings.boss_points
-                self._update_stats()
-                self.boss.boss_defeated = True
-                self.settings.boss_hp = 60
+            for bullet in self.bullets.sprites():
+                self.boss.take_damage()
+                bullet.kill()
+            self._is_boss_dead()
+
+    def _update_boss(self):
+        self.boss.check_boss_edges()
+        self._check_boss_edges()
+        self.boss.update()
+        if self.boss.rect.colliderect(self.human.rect):
+            self._human_hit()
+            self.sb.prep_humans()
+
+
+    def _check_boss_edges(self):
+        """React according to whether any of the aliens have reached the edge of the screen"""
+        if self.boss.check_boss_edges():
+            self._change_fleet_direction()
+
+    def _change_boss_direction(self):
+        """Descent of the fleet and change of direction"""
+        self.boss.rect.y += self.settings.fleet_drop_speed
+        self.settings.fleet_direction *= -1
+
+    def _is_boss_dead(self):
+        if self.settings.boss_hp <= 0:
+            self.boss.kill()
+            self.stats.score += self.settings.boss_points
+            self._update_stats()
+            self.boss.boss_defeated = True
+            self.settings.boss_hp = 60
+
+    def _shot(self):
+        if randint(1, 2500) == 1:
+            self.create_boss_bullets()
+
+    def create_boss_bullets(self):
+        if len(self.boss_bullets) < self.settings.boss_bullets_allowed:
+            new_bullet = BossBullet(self)
+            self.boss_bullets.add(new_bullet)
+
+    def _update_boss_bullets(self):
+        self.boss_bullets.update()
+        for bullet in self.boss_bullets.copy():
+            if bullet.rect.bottom < 0:
+                self.boss_bullets.remove(bullet)
+
+            if bullet.rect.colliderect(self.human.rect):
+                self._human_hit()
+                self.sb.prep_humans()
+                #self.human_hit_sound.play()
+                self.boss_bullets.remove(bullet)
 
     def _human_hit(self):
         """React to the collision of the alien with the ship"""
@@ -216,6 +262,7 @@ class MyGame:
             # Delete all enemies and bullets
             self.enemies.empty()
             self.bullets.empty()
+            self.boss_bullets.empty()
             # Create new fleet and ship
             self._create_fleet()
             self.human.center_human()
@@ -234,9 +281,12 @@ class MyGame:
         self.human.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
+        for bullet in self.boss_bullets.sprites():
+            bullet.draw_boss_bullet()
         self.enemies.draw(self.screen)
         self.sb.show_score()
         self.create_boss()
+        self._update_boss()
         # Draw a button "Play" if the game not active
         if not self.stats.game_active:
             self.play_button.draw_button()
@@ -248,7 +298,10 @@ class MyGame:
             if self.stats.game_active:
                 self.human.update()
                 self._update_bullets()
+                self._update_boss_bullets()
+                self._shot()
                 self._update_enemies()
+
             self._update_screen()
 
 

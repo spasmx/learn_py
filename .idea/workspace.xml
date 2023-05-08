@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c08bdafd-b08c-4662-9722-59af52ec33a3" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/my_game/boss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/lose_img.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/win_img.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_game/boss_bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/alien_invasion.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/alien_invasion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/game_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/scoreboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alien_game/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_game/ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/components.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/components.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/game_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/human.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/human.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/images/1.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/images/1.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/images/Untitled.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/images/Untitled.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/boss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_game/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/my_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/my_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683223075582</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="11">
+      <created>1683573953411</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683573953411</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,12 +261,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/bullet.py</url>
-          <line>25</line>
+          <line>22</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_game/bullet.py</url>
-          <line>26</line>
+          <line>23</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
