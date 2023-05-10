@@ -13,7 +13,7 @@ class Boss(Sprite):
         self.screen_rect = self.screen.get_rect()
         self.settings = game.settings
 
-        self.image = pygame.image.load('images/sashka.bmp')
+        self.image = pygame.image.load('images/boss.bmp')
         self.rect = self.image.get_rect()
         self.rect.midtop = self.screen_rect.midtop
         self.rect.y = self.rect.top + 120
@@ -32,8 +32,6 @@ class Boss(Sprite):
     def update(self):
         self.x += self.settings.boss_speed * self.settings.fleet_direction
         self.rect.x = self.x
-
-
 
     def take_damage(self):
         self.settings.boss_hp -= self.settings.bullets_damage

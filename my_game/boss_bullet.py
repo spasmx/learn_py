@@ -11,7 +11,7 @@ class BossBullet(Sprite):
         self.settings = game.settings
         self.boss = game.boss
 
-        self.image = pygame.image.load('images/1c.bmp')
+        self.image = pygame.image.load('images/boss_bullet.bmp')
         self.rect = self.image.get_rect()
 
         self.rect.centerx = game.boss.rect.centerx
@@ -26,7 +26,7 @@ class BossBullet(Sprite):
         # Update rect position
         self.rect.y = self.y
         if self.rect.bottom < 0:
-            self.kill()
+            self.empty()
 
     def draw_boss_bullet(self):
         self.screen.blit(self.image, self.rect)
