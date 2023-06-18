@@ -5,25 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c08bdafd-b08c-4662-9722-59af52ec33a3" name="Changes" comment="11">
-      <change afterPath="$PROJECT_DIR$/my_game/health_bar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/boss.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/boss_bullet.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/images/play_button_active.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/8-bit-game-over.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/8-bit-mini-win-sound-effect.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/compute-key.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/kill-enemy-8-bit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/lose-sound.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_game/sounds/snake-hissing.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/data/readable_hn_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/hh_submission_visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/hn_article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/hn_submissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/python_repos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_request/python_repos_visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/data/death_valley_2018_full.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/data/death_valley_2018_simple.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/data/sitka_weather_07-2018_simple.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/data/sitka_weather_2018_full.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/data/sitka_weather_2018_simple.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/csv/sitka_highs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/die.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/die_visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/eq_data_1_day_m1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/eq_data_30_day_m1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/eq_data_7_day_m1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/readable_eq_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/world_fires_1_day.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/data/world_fires_7_day.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/eq_explore_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/json/global_earthquakes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/mpl_cubes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/mpl_squares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/random_walk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/random_walk_visual.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/scatter_cubes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_visualization/scatter_squares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/boss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/boss_bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/boss_bullet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/components.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/components.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/game_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/images/sashka.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/my_game.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_game/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,14 +86,15 @@
       <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\my_game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\spasmx\PycharmProjects\pythonProject\learn_py\learn" />
-      <recent name="C:\Users\spasmx\PycharmProjects\pythonProject\learn_py\my_game\images" />
-      <recent name="C:\Users\spasmx\PycharmProjects\pythonProject\learn_py\my_game" />
-      <recent name="C:\Users\spasmx\PycharmProjects\pythonProject\learn_py\alien_game" />
+      <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\api_request" />
+      <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\api_request\data" />
+      <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\data_visualization\json\data" />
+      <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\data_visualization\csv\data" />
+      <recent name="C:\Users\acer\PycharmProjects\pythonProject\learn_py\data_visualization\csv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.my_game (1)">
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.hh_submission_visual (1)">
+    <configuration name="hh_submission_visual (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_request/hh_submission_visual.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="alien_invasion" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hh_submission_visual" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/alien_game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_request/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/alien_game/alien_invasion.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\acer\PycharmProjects\pythonProject\learn_py\api_request\hh_submission_visual.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="human" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hn_article" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,11 +144,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_game/human.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_request/hn_article.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="my_game (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hn_submissions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,11 +165,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_game/my_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_request/hn_submissions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,7 +178,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="my_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="python_repos_visual" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="learn_py" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -174,11 +186,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_request" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\acer\PycharmProjects\pythonProject\learn_py\my_game\my_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_request/python_repos_visual.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.my_game (1)" />
-        <item itemvalue="Python.my_game" />
-        <item itemvalue="Python.human" />
-        <item itemvalue="Python.alien_invasion" />
-        <item itemvalue="Python.1" />
+        <item itemvalue="Python.hh_submission_visual (1)" />
+        <item itemvalue="Python.python_repos_visual" />
+        <item itemvalue="Python.hh_submission_visual" />
+        <item itemvalue="Python.hn_submissions" />
+        <item itemvalue="Python.hn_article" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +274,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683586279828</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="11">
+      <created>1683707836488</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683707836488</updated>
+    </task>
+    <task id="LOCAL-00010" summary="11">
+      <created>1683707858867</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683707858867</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,6 +341,81 @@
           <url>file://$PROJECT_DIR$/my_game/scoreboard.py</url>
           <line>55</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api_request/hn_submissions.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
